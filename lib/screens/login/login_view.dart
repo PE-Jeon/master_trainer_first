@@ -12,7 +12,7 @@ class LoginView extends StatelessWidget {
           child: Text(model.title),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: model.updateCounter,
+          onPressed: () => model.navigateToRoutine(),
           child: SizedBox(
             child: Icon(
               Icons.add,

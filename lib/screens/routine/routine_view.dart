@@ -9,10 +9,10 @@ class RoutineView extends StatelessWidget {
     return ViewModelBuilder<RoutineViewModel>.reactive(
       builder: (context, model, child) => Scaffold(
         body: Center(
-          child: Text('Startup View'),
+          child: Text('Routine View'),
         ),
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () => model.navigateToLogin(),
         ),
       ),
       viewModelBuilder: () => RoutineViewModel(),
