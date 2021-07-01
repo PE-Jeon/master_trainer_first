@@ -24,23 +24,15 @@ dependencies:
 
   flutter:
     sdk: flutter
-  async:
-  intl:
-  firebase_core:
-  provider:
-  firebase_auth:
-  flutter_local_notifications:
-  firebase_storage:
-  stacked:
-  stacked_services:
-  auto_route: ^0.6.9
-  get_it:
-  injectable:
+
+  get_cli:
+  get:
+  get_storage:
 
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
-  cupertino_icons: ^1.0.0
+  cupertino_icons:
 
 dev_dependencies:
   build_runner:
