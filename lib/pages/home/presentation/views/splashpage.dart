@@ -11,7 +11,7 @@ class SplashPage extends GetView<HomeController> {
         appBar: AppBar(
           title: Text('Splash Page'),
         ),
-        
+
       )
     );
   }
