@@ -1,18 +1,28 @@
+import 'dart:io';
+
 import 'package:get/get.dart';
 import 'package:master_trainer_first/pages/home/domain/adapters/repository_adapter.dart';
 import 'package:master_trainer_first/pages/home/domain/entity/cases_model.dart';
 
 class HomeController extends SuperController<CasesModel> {
-  HomeController({required this.homeRepository});
+  // HomeController({required this.homeRepository});
 
-  final IHomeRepository homeRepository;
+  // final IHomeRepository homeRepository;
+  var tabIndex = 0.obs;
+
+  void changeTabIndex(int index) {
+    print('changeTabIndex');
+    print(index);
+    tabIndex.value = index;
+    print(tabIndex.value);
+  }
 
   @override
   void onInit() {
     super.onInit();
 
     //Loading, Success, Error handle with 1 line of code
-    append(() => homeRepository.getCases);
+    // append(() => homeRepository.getCases);
   }
 
   @override
