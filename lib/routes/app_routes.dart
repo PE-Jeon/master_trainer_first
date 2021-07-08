@@ -5,5 +5,7 @@ abstract class Routes{
   static const HOME = '/home';
   static const SETTING = '/setting';
   static const CHATTING = '/chatting';
+  static const ROUTINE = '/routine';
+  static const SCHEDULE = '/schedule';
 
 }

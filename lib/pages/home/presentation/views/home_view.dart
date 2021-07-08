@@ -3,16 +3,23 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:master_trainer_first/pages/home/presentation/controller/home_controller.dart';
+import 'package:master_trainer_first/pages/home/presentation/views/splashpage.dart';
+import 'package:master_trainer_first/pages/routine/presentation/views/routine_view.dart';
+import 'package:master_trainer_first/pages/schedule/presentation/views/schedule_view.dart';
 
 class HomeView extends GetView<HomeController> {
+
   
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('HomeView'),
-      ),
-      body: Container(),
+      body: Obx(() => IndexedStack(
+        index: controller.tabIndex.value,
+        children: [
+          ScheduleView(),
+          RoutineView(),
+        ]
+      )),
       bottomNavigationBar: Obx(() => BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         backgroundColor: Colors.grey,
@@ -24,20 +31,20 @@ class HomeView extends GetView<HomeController> {
         onTap: controller.changeTabIndex,
         items: [
           BottomNavigationBarItem(
-            title: Text('Favorites'),
-            icon: Icon(Icons.favorite)
+            label: 'Favorites',
+            icon: Icon(Icons.favorite),
           ),
           BottomNavigationBarItem(
-              title: Text('Music'),
+              label: 'Music',
               icon: Icon(Icons.music_note)
           ),
           BottomNavigationBarItem(
-              title: Text('Places'),
+              label: 'Places',
               icon: Icon(Icons.location_on)
           ),
           BottomNavigationBarItem(
-              title: Text('News'),
-              icon: Icon(Icons.library_books)
+              label: 'Settings',
+              icon: Icon(Icons.settings)
           ),
         ],
       ),)

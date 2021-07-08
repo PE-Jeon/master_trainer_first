@@ -18,7 +18,11 @@ abstract class AppPages {
     GetPage(
       name: Routes.HOME,
       page: () => HomeView(),
+      children: [
+        GetPage(name: Routes.SCHEDULE, page: () => SettingView()),
+        GetPage(name: Routes.ROUTINE, page: () => SettingView()),
+        GetPage(name: Routes.SETTING, page: () => SettingView()),
+      ]
     ),
-    GetPage(name: Routes.SETTING, page: () => SettingView()),
   ];
 }

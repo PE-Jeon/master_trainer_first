@@ -16,12 +16,17 @@ class _SplashPageState extends State<SplashPage> {
     Future.delayed(Duration(seconds: 3), () {
       print('after 3 second');
 
-      Get.to(() => HomeView());
+      Get.off(() => HomeView());
     });
 
     super.initState();
   }
 
+@override
+  void dispose() {
+    // TODO: implement dispose
+    super.dispose();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

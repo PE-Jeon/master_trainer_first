@@ -3,6 +3,8 @@ import 'dart:io';
 import 'package:get/get.dart';
 import 'package:master_trainer_first/pages/home/domain/adapters/repository_adapter.dart';
 import 'package:master_trainer_first/pages/home/domain/entity/cases_model.dart';
+import 'package:master_trainer_first/pages/home/presentation/views/home_view.dart';
+import 'package:master_trainer_first/pages/routine/presentation/views/routine_view.dart';
 
 class HomeController extends SuperController<CasesModel> {
   // HomeController({required this.homeRepository});
@@ -11,10 +13,7 @@ class HomeController extends SuperController<CasesModel> {
   var tabIndex = 0.obs;
 
   void changeTabIndex(int index) {
-    print('changeTabIndex');
-    print(index);
     tabIndex.value = index;
-    print(tabIndex.value);
   }
 
   @override
@@ -81,5 +80,4 @@ class HomeController extends SuperController<CasesModel> {
   void onResumed() {
     print('onResumed called');
   }
-
 }
