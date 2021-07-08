@@ -7,5 +7,5 @@ abstract class Routes{
   static const CHATTING = '/chatting';
   static const ROUTINE = '/routine';
   static const SCHEDULE = '/schedule';
-
+  static const LOG = '/log';
 }

@@ -6,7 +6,11 @@ class SettingView extends GetView<SettingController> {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Setting View'),
+      ),
+    );
   }
 
 }

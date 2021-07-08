@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:master_trainer_first/pages/home/presentation/controller/home_controller.dart';
 import 'package:master_trainer_first/pages/home/presentation/views/splashpage.dart';
+import 'package:master_trainer_first/pages/log/presentation/views/log_view.dart';
 import 'package:master_trainer_first/pages/routine/presentation/views/routine_view.dart';
 import 'package:master_trainer_first/pages/schedule/presentation/views/schedule_view.dart';
+import 'package:master_trainer_first/pages/setting/presentation/views/setting.dart';
 
 class HomeView extends GetView<HomeController> {
 
@@ -18,6 +20,8 @@ class HomeView extends GetView<HomeController> {
         children: [
           ScheduleView(),
           RoutineView(),
+          LogView(),
+          SettingView(),
         ]
       )),
       bottomNavigationBar: Obx(() => BottomNavigationBar(
